@@ -1,157 +1,137 @@
+// 1
+// let a = 6;
+// let b = 5;
+// console.log(a, b);
+// let temp = b;
+// b = a;
+// a = temp;
+// console.log(a, b);
+
+//2
+// const s = `Hello beauty there`;
+// const a = s.split(" ");
+// console.log(a);
+
 //3
-//a
-for (let i = 0; i < 7; i++) {
-  console.log(i);
-}
-// b
-// let n = Number(prompt("Enter a number"));
-// for (let i = 0; i < n; i++) {
-//   console.log(i);
-// }
-//c
-// let n = Number(prompt("Enter a number >= 3"))
-// for(let i =3 ; i< n ; i++) {
-//   console.log(i);
-// }
-//d
-// let n = Number(prompt("Enter n"));
-// let c = Number(prompt("Enter c"));
-// for (let i = c; i < n; i++) {
-//   console.log(i);
-// }
+// const a = [1, 2, 3, 4];
+// console.log(...a);
 
 //4
-// let n = Number(prompt("Enter a number"));
-// let fractional = 1;
-// for (let i = 1; i <= n; i++) {
-//   fractional = fractional * i;
+// const clothes = ["ao coc", "quan dui", "quan lot", "vay", "quan bo"];
+// let choice = prompt("What do you wan to do???(C,R,U,D)").toLowerCase();
+// const command = ["c", "r", "u", "d"];
+// if (!command.includes(choice)) {
+//   alert("command is not supported!!!");
 // }
-// alert(`the Fractional of ${n} is ${fractional}`);
+// if (choice === "c") {
+//   let addCloth = prompt("them do gi");
+//   clothes.push(addCloth);
+//   alert("Done");
+//   console.log(clothes);
+// } else if (choice === "r") {
+//   clothes.forEach((element) => {
+//     console.log(element);
+//   });
+// } else if (choice === "u") {
+//   let index = Number(prompt("vi tri sua"));
+//   if (!index) {
+//     console.log("please enter a number");
+//   }
+//   if (index > clothes.length) {
+//     alert(`please enter a number < ${clothes.length}`);
+//     index = Number(prompt("vi tri sua"));
+//   }
+//   let fix = prompt("thay bang gi");
+//   clothes[index] = fix;
+// } else if (choice === "d") {
+//   let indexDelete = Number(prompt("xoa cho nao???"));
+//   clothes.splice(indexDelete, 1);
+// }
 
 //5
-// let age = Number(prompt("How old are you???"));
-// if (age < 14) {
-//   alert("You are not old enough to view this content");
-// } else {
-//   alert("Enjoy");
-// }
+// const a = prompt("Enter numbers seperated by commas(,)").split(",");
+// let total = 0;
+// a.forEach((num) => {
+//   total += Number(num);
+// });
+// console.log(total);
 
 //6
-// let x = Number(prompt("Enter a number"));
-// if (x < 4.5) {
-//   alert("Lower half of 9");
+// const a = prompt("Enter numbers seperated by commas(,)").split(",");
+// const newArray = a.map((num) => {
+//   return Number(num);
+// });
+// const smallestNumber = Math.min(...newArray);
+// console.log(smallestNumber);
+
+//7
+// const arr = [3, 4, 6, -9, 10, -88, 2];
+// let num = Number(prompt("Enter a number"));
+// if (!arr.includes(num)) {
+//   alert(`${num} is not Found in my array`);
 // } else {
-//   alert("Higher half of 9");
+//   alert(`${num} is Found at index of ${arr.indexOf(num)}`);
 // }
 
-// 7
-// let n = Number(prompt("Enter a number"));
-// let x = Number(prompt("Enter a number"));
-// if (x < n / 2) {
-//   alert(`${x} is in lower half of ${n}`);
-// } else if (x > n / 2) {
-//   alert(`${x} is in higher half of ${n}`);
+//8
+//8.1
+// const sizeOfSheep = [5, 7, 300, 90, 24, 50, 75];
+// console.log("Hello my name is Viet Anh this is my sheep size");
+// console.log(...sizeOfSheep);
+// //8.2
+// let biggestSize = Math.max(...sizeOfSheep);
+// console.log(`Now my biggest sheep has size of ${biggestSize} let shave it`);
+// //8.3
+// sizeOfSheep[sizeOfSheep.indexOf(biggestSize)] = 8;
+// console.log("after shearing here is my size of flock");
+// console.log(...sizeOfSheep);
+// //8.4 + 8.5
+// for (let i = 1; i <= 4; i++) {
+//   for (let i = 0; i < sizeOfSheep.length; i++) {
+//     sizeOfSheep[i] += 50;
+//   }
+//   console.log(`Month ${i}`);
+//   console.log("One month has passed this is the size of sheep");
+//   console.log(...sizeOfSheep);
 // }
-
-// 8
-// let n = Number(prompt("Enter a number"));
-// if (n % 2 === 0) {
-//   alert(`${n} is an even number`);
-// } else {
-//   alert(`${n} is an odd number`);
+// //8.6
+// let totalSize = 0;
+// for (const size of sizeOfSheep) {
+//   totalSize += size;
 // }
+// let moneyGet = totalSize * 2;
+// console.log(`My flock has total size of ${totalSize}`);
+// console.log(`I would get ${totalSize} * 2$ = ${moneyGet}`);
 
 //9
-// a
-// for (let i = 0; i < 6; i++) {
-//   if (i < 3) {
-//     console.log("L");
-//   } else {
-//     console.log("H");
+// let size = 50;
+// const colors = ['red', 'gray', 'blue', 'purple', 'cyan'];
+// for(let i =0 ; i < colors.length ; i++) {
+//   for(let j = 0 ; j < 4; j++) {
+//   color(colors[i]);
+//   fd(size);
+//   rt(90);
 //   }
-// }
-// b
-// let n = Number(prompt("Enter a number"));
-// for (let i = 0; i < n; i++) {
-//   if (i < Math.floor(n / 2) + 1) {
-//     console.log("L");
-//   } else {
-//     console.log("H");
-//   }
-// }
-// c
-// for (let i = 0; i < 8; i++) {
-//   if (i % 2 === 0) {
-//     console.log(0);
-//   } else console.log(1);
-// }
-// d
-// let n = Number(prompt("Enter a number"));
-// for (let i = 0; i < n; i++) {
-//   if (i % 2 === 0) {
-//     console.log(0);
-//   } else console.log(1);
+//   size += 50;
 // }
 
 //10
-// let wightInKg = Number(prompt("Your weight in kg"));
-// let HeightInCm = Number(prompt("Your height in cm"));
-// let HeightInM = HeightInCm / 100;
-// let BMI1 = wightInKg / (HeightInM * HeightInM);
-// let BMI = Number(BMI1.toFixed(1));
-// alert(`Your BMI is ${BMI}`);
-// if (BMI < 16) {
-//   alert("You are severly undeweight");
-// } else if (BMI >= 16 && BMI <= 18.5) {
-//   alert("You are under weight");
-// } else if (BMI >= 18.5 && BMI <= 25) {
-//   alert("You are normal");
-// } else if (BMI >= 25 && BMI <= 30) {
-//   alert("You are overweight");
-// } else if (BMI > 30) {
-//   alert("You are obese");
-// }
+// const arrayName = prompt("Enter a sequences of name seperated by commas").split(
+//   ","
+// );
+// const newArray = arrayName.map((name) => {
+//   return `<${name}>`;
+// });
+// alert(`${arrayName} => ${newArray}`);
 
 //11
-// square
-// setshape("rocket")
-// for(let  i = 0; i < 4; i++) {
-//     fd(50);
-//     rt(90);
-// }
-//triangle
-// setshape("rocket")
-// for (let i = 0; i < 3; i++) {
-//   fd(50);
-//   rt(120);
-// }
-// pentagon
-// setshape("rocket")
-// for (let i = 0; i < 5; i++) {
-//   fd(50);
-//   rt(360 / 5);
-// }
-//hexagon
-// setshape("rocket")
-// for (let i = 0; i < 6; i++) {
-//   fd(50);
-//   rt(360 / 6);
-// }
-
-//12
-// setshape("rocket")
-// let n = Number(prompt('Enter number of egdes'));
-// for(let i= 0 ; i < n; i++) {
-//     fd (50);
-//     rt (360/n);
-// }
-
-//13
-// setshape("rocket");
-// let n = Number(prompt("How many polygons???"));
-// for (let i = 3; i < n + 3; i++) {
-//   for (let j = 1; j <= i; j++) {
-//     fd(50);
-//     rt(360 / i);
-//   }
-// }
+// const number = prompt("Enter a sequences of number seperated by commas").split(
+//   ","
+// );
+// const newArray = number.map((num) => {
+//   return Number(num);
+// });
+// const oddNumber = newArray.filter((num) => {
+//   return num % 2 == 0;
+// });
+// alert(`${newArray} => ${oddNumber}`);
